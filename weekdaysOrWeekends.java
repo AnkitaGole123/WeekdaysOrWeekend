@@ -1,14 +1,20 @@
-import java.util.Scanner;
+import java.util.*;
 public class weekdaysOrWeekends {
     public static void main(String[] args) {
-        Scanner myObj = new Scanner(System.in);  // Create a Scanner object
-        System.out.println("Enter username ");
-        String userName = myObj.next();
-         if(userName.equalsIgnoreCase("saturday") || userName.equalsIgnoreCase("sunday")) {
-             System.out.println("weekends");
-         }
-         else{
-             System.out.println("week days");
-         }
+        String days = args[0];
+        Set<String> weekDaysSet = new HashSet<>(List.of("monday","tuesday","wednesday","thursday","friday"));
+        if(isaBoolean(days)) {
+            System.out.println("weekends");
+        }
+        else if(weekDaysSet.contains(days)){
+            System.out.println("week days ");
+        }
+        else {
+            System.out.println("invalid input");
+        }
+    }
+
+    private static boolean isaBoolean(String days) {
+        return days.equalsIgnoreCase("saturday") || days.equalsIgnoreCase("sunday");
     }
 }
