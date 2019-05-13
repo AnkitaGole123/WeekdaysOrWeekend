@@ -11,7 +11,6 @@ public class WeekdaysWeekends {
         }
         else {
             System.out.println("invalid input");
-        }
     }
     private static boolean getWeekends(String weekends) {
         return weekends.equals("saturday") || weekends.equals("sunday");
