@@ -14,6 +14,6 @@ public class WeekdaysWeekends {
         }
     }
     private static boolean getWeekends(String weekends) {
-        return weekends.equalsIgnoreCase("saturday") || weekends.equalsIgnoreCase("sunday");
+        return weekends.equals("saturday") || weekends.equals("sunday");
     }
 }
